@@ -1,0 +1,16 @@
+scoreboard players set @s[team=1] currentTeam 1
+scoreboard players set @s[team=2] currentTeam 2
+scoreboard players set @s[team=3] currentTeam 3
+scoreboard players set @s[team=4] currentTeam 4
+scoreboard players set @s[team=5] currentTeam 5
+scoreboard players set @s[team=6] currentTeam 6
+scoreboard players set @s[team=7] currentTeam 7
+scoreboard players set @s[team=8] currentTeam 8
+scoreboard players set @s[team=9] currentTeam 9
+scoreboard players set @s[team=10] currentTeam 10
+scoreboard players set @s[team=11] currentTeam 11
+scoreboard players set @s[team=12] currentTeam 12
+scoreboard players set @s[team=13] currentTeam 13
+scoreboard players set @s[team=14] currentTeam 14
+scoreboard players set @s[team=15] currentTeam 15
+scoreboard players set @s[team=16] currentTeam 16

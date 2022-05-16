@@ -1,0 +1,10 @@
+{
+  "pack": {
+    "pack_format": 9,
+    "description": [
+      { "text": "Playtime", "color": "gold" },
+      { "text": "\nBroCraft Essentials", "color": "#FF5722" },
+      { "text": "\nby ZachTheDev", "color": "#902200" }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+execute as @a[scores={tmpWalk=1..,Timer=0},team=AFK] at @s run function afksmart:unafk
+execute as @a[scores={tmpRun=1..,Timer=0},team=AFK] at @s run function afksmart:unafk
+execute as @a[scores={tmpFly=1..,Timer=0},team=AFK] at @s run function afksmart:unafk
+execute as @a[scores={tmpElyFly=1..,Timer=0},team=AFK] at @s run function afksmart:unafk
+execute as @a[scores={tmpSwim=1..,Timer=0},team=AFK] at @s run function afksmart:unafk
+execute as @a[scores={tmpSneak=1..,Timer=0},team=AFK] at @s run function afksmart:unafk
+execute as @a[scores={tmpJump=1..,Timer=0},team=AFK] at @s run function afksmart:unafk
+execute as @a[scores={tmpRidePig=1..,Timer=0},team=AFK] at @s run function afksmart:unafk
+execute as @a[scores={tmpRideHorse=1..,Timer=0},team=AFK] at @s run function afksmart:unafk
+execute as @a[scores={tmpRow=1..,Timer=0},team=AFK] at @s run function afksmart:unafk
+execute as @a[scores={tmpMinecart=1..,Timer=0},team=AFK] at @s run function afksmart:unafk
+execute as @a[scores={tmpWalkUnderWatr=1..,Timer=0},team=AFK] at @s run function afksmart:unafk
+execute as @a[scores={tmpWalkWater=1..,Timer=0},team=AFK] at @s run function afksmart:unafk
