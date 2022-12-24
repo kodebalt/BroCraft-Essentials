@@ -3,6 +3,9 @@
 ## Only tick if AFKSmart is enabled
 execute if score #enabled afksmart.config matches 1 run schedule function afksmart:tick 1t
 
+## Verify that config values are in range
+execute unless score #timeToAFKInSeconds afksmart.config matches 1..86400 run scoreboard players set #timeToAFKInSeconds afksmart.config 60
+
 ## Store the original team of a player for the rejointeam function
 execute as @a[team=!AFK] at @s run function afksmart:saveteam
 
