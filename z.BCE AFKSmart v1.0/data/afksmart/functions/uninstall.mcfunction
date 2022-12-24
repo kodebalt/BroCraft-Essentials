@@ -2,10 +2,10 @@
 
 schedule clear afksmart:tick
 
-# Playtime
+# Remove Playtime Objectives
 scoreboard objectives remove pt_playtime
 scoreboard objectives remove pt_playtime
 scoreboard objectives remove pt_playtimeTick
 
-# Constants
+# Remove Constants
 scoreboard objectives remove pt_constant
