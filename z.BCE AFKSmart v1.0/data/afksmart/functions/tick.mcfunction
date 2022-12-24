@@ -42,4 +42,4 @@ team join DEFAULT @a[team=]
 scoreboard players enable @a afk
 
 ## Run if player used '/trigger afk' command
-execute as @a[scores={afk=1..}] at @s run function afksmart:overrideafk
+execute as @a[scores={afk=1..}] at @s run function afksmart:toggleafk

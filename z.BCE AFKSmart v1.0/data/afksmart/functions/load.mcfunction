@@ -154,6 +154,8 @@ scoreboard objectives add afksmart.online dummy
 
 ## Create Trigger
 scoreboard objectives add afk trigger "/trigger afk"
+# 0 = !AFK; 1 = AFK
+scoreboard objectives add afksmart.toggle dummy
 
 ## Create Constants
 scoreboard objectives add afksmart.constantVar dummy "Constant"

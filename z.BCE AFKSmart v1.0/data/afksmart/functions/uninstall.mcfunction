@@ -139,14 +139,17 @@ scoreboard objectives remove afksmart.stat.whileAFK.rideHorse
 scoreboard objectives remove afksmart.stat.whileAFK.rideMinecart
 scoreboard objectives remove afksmart.stat.whileAFK.ridePig
 scoreboard objectives remove afksmart.stat.whileAFK.rideStrider
+
 scoreboard objectives remove afksmart.stat.isOffline
 scoreboard objectives remove afksmart.originalTeam
 scoreboard objectives remove afksmart.online
+scoreboard objectives remove afksmart.toggle
 
 # Remove Trigger
-scoreboard objectives remove playtime
+scoreboard objectives remove afk
 
 # Remove Teams
+team remove AFK
 team remove DEFAULT
 team remove 0
 team remove 1
