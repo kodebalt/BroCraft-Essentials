@@ -1,18 +1,18 @@
-# Clears ticking
+# Stops ticking and removes tick function
 schedule clear playtime:tick
 
-# Config
+# Remove Config
 scoreboard objectives remove playtime.config
 
-# Scoreboard Objectives
+# Remove Scoreboard Objectives
 scoreboard objectives remove playtime.stat.timeInTicks
 scoreboard objectives remove playtime.remainderTimeInTicks
 scoreboard objectives remove playtime.remainderTimeInMinutes
 scoreboard objectives remove playtime.timeInHours
 scoreboard objectives remove playtime.timeInDays
 
-# Trigger
+# Remove Trigger
 scoreboard objectives remove playtime
 
-# Constants
+# Remove Constants
 scoreboard objectives remove playtime.constantVar
