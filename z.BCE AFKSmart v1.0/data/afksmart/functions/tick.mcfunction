@@ -1,28 +1,45 @@
 # Controls everything to do the datapack during each tick
 
-schedule function afksmart:tick 1t
+## Only tick if AFKSmart is enabled
+execute if score #enabled afksmart.config matches 1 run schedule function afksmart:tick 1t
 
-scoreboard players add @a[team=!AFK] Timer 1
-scoreboard players set @a[team=AFK] Timer 0
-
+## Store the original team of a player for the rejointeam function
 execute as @a[team=!AFK] at @s run function afksmart:saveteam
 
-# Handle Movement Events
-execute as @a[scores={Timer=3000..}] at @s run function afksmart:nowafk
-execute as @a at @s run function afksmart:resetscores/resettimerwhileafk
+## Calculate to Time to AFK config value in ticks for conditional statements
+scoreboard players operation #timeToAFKInTicks afksmart.config = #timeToAFKInSeconds afksmart.config
+scoreboard players operation #timeToAFKInTicks afksmart.config *= #20 afksmart.constantVar
 
-execute as @a[team=AFK,scores={Timer=0}] at @s run function afksmart:moving
-execute as @a[team=!AFK] at @s run function afksmart:resetscores/resettimerwhileactive
+## Handle timer based on AFK status
+# Add 1 each tick to timer so we know how long player is idle
+scoreboard players add @a[team=!AFK] afksmart.timer 1
 
-# Keep Timer at 0 when AFK
-scoreboard players set @a[scores={Timer=3600..},team=!AFK] Timer 0
+# Set timer to 0 if player is AFK, since there is no reason to track how long they are AFK
+scoreboard players set @a[team=AFK] afksmart.timer 0
 
-# Join Event
-scoreboard players reset @a[scores={quit=1}] quit
-team join 0 @a[team=]
+## Handle Movement Events
+# Reset timer if player moves
+execute as @a[team=!AFK] at @s run function afksmart:onmove
 
-# Quit Event
+# Set player as AFK is timer reaches config value
+execute as @a[team=!AFK] if score #timeToAFKInTicks afksmart.config = @s afksmart.timer at @s run function afksmart:onafk
+
+# Clear AFK if player moves while AFK
+execute as @a[team=AFK] at @s run function afksmart:onmovewhileafk
+
+## Join Event
+## TODO
+#scoreboard players reset @a[scores={quit=1}] quit
+
+## Quit Event
+## TODO
 #function afksmart:resetoffline
 
-# /trigger afk
-execute as @a[scores={afk=1..}] at @s run function afksmart:setafk
+## All players should be in a default team if not assigned a color
+team join DEFAULT @a[team=]
+
+## Enables the '/trigger afk' command
+scoreboard players enable @a afk
+
+## Run if player used '/trigger afk' command
+execute as @a[scores={afk=1..}] at @s run function afksmart:overrideafk

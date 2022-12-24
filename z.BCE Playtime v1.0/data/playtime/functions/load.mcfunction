@@ -22,8 +22,6 @@ scoreboard players set #1200 playtime.constantVar 1200
 scoreboard players set #72000 playtime.constantVar 72000
 # Num. of ticks in 1 day
 scoreboard players set #1728000 playtime.constantVar 1728000
-# Used to subtract 1 tick each tick from playtime stat if player is AFK
-scoreboard players set #1 playtime.constantVar 1
 
 ## Create variables that rely on the AFKSmart datapack
 # Enable hook between Playtime and AFKSmart

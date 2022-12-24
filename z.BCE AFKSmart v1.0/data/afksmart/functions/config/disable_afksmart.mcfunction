@@ -1,0 +1,1 @@
+execute if score #enabled afksmart.config matches 1 run scoreboard players set #enabled afksmart.config 0
