@@ -7,9 +7,9 @@ execute if score #enabled afksmart.config matches 1 run scoreboard players opera
 execute if score #enabled afksmart.config matches 1 run scoreboard players operation #timeToAFKinMinutes afksmart.config /= #60 afksmart.constantVar
 
 # Header
-tellraw @s ["",{"text":"                                                                                                    ","color":"dark_gray","strikethrough":true}]
+tellraw @s ["",{"text":"                                                                                                         ","color":"dark_gray","strikethrough":true}]
 tellraw @s ["",{"text":"                                ","color":"dark_gray"},{"text":"AFKSmart","color":"gold","bold":true},{"text":": ","color":"gray","bold":false},{"text":"Global Settings","color":"gray","bold": false},{"text":"                     ","color":"dark_gray"}]
-tellraw @s ["",{"text":"                                                                                                    ","color":"dark_gray","strikethrough":true}]
+tellraw @s ["",{"text":"                                                                                                         ","color":"dark_gray","strikethrough":true}]
 
 # Body
 execute if score #enabled afksmart.config matches 1 run tellraw @s ["",{"text":"[ ✔ ]","color":"green","clickEvent":{"action":"run_command","value":"/function afksmart:config/disable_afksmart"},"hoverEvent":{"action":"show_text","contents":["",{"text":"Click to disable ","color":"red"},"AFKSmart",{"text":".","color":"red"},{"text":"\nWhen enabled, this allows AFKSmart to function.","color":"gray"},{"text":"\nDefault: Enabled","color":"dark_gray"}]}}," Enable AFKSmart?"]
@@ -28,7 +28,7 @@ tellraw @s ["",{"text":"[ ✎ ]","color":"gray","clickEvent":{"action":"suggest_
 tellraw @s ["",{"text":"[ ✎ ]","color":"gray","clickEvent":{"action":"suggest_command","value":"/team modify 13 prefix {\"text\":\"{prefix} \",\"color\":\"light_purple\",\"bold\":true}"},"hoverEvent":{"action":"show_text","contents":["",{"text":"Click to modify the team prefix for Light Purple","color":"gray"},{"text":"\nAccepts: String. Replace '{prefix}', including {} chars, before running command.\nDefault: '{prefix} '","color":"dark_gray"}]}}," Set Prefix: Light Purple Team","      ",{"text":"[ ✎ ]","color":"gray","clickEvent":{"action":"suggest_command","value":"/team modify 14 prefix {\"text\":\"{prefix} \",\"color\":\"yellow\",\"bold\":true}"},"hoverEvent":{"action":"show_text","contents":["",{"text":"Click to modify the team prefix for Yellow","color":"gray"},{"text":"\nAccepts: String. Replace '{prefix}', including {} chars, before running command.\nDefault: '{prefix} '","color":"dark_gray"}]}}," Set Prefix: Yellow Team"]
 
 # Footer
-tellraw @s ["",{"text":"                                                                                                    ","color":"dark_gray","strikethrough":true,"bold":false}]
+tellraw @s ["",{"text":"                                                                                                         ","color":"dark_gray","strikethrough":true,"bold":false}]
 
 # Suppresses the extra message sent if done through /function
 execute store result score #sendCommandFeedback afksmart.config run gamerule sendCommandFeedback
