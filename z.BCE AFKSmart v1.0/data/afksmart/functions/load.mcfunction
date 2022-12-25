@@ -4,13 +4,14 @@
 
 ## Create Config
 scoreboard objectives add afksmart.config dummy "AFKSmart Config"
-scoreboard players set #enabled afksmart.config 1
-scoreboard players set #timeToAFKInTicks afksmart.config 1200
+execute unless score #enabled afksmart.config matches 0..1 run scoreboard players set #enabled afksmart.config 1
+execute unless score #timeToAFKInTicks afksmart.config matches 20..1728000 run scoreboard players set #timeToAFKInTicks afksmart.config 1200
 execute unless score #timeToAFKInSeconds afksmart.config matches 1..86400 run scoreboard players set #timeToAFKInSeconds afksmart.config 60
-scoreboard players set #timeToAFKInMinutes afksmart.config 1
+execute unless score #timeToAFKInMinutes afksmart.config matches 1..1440 run scoreboard players set #timeToAFKInMinutes afksmart.config 1
 
 ## Create Scoreboard Objectives
 scoreboard objectives add afksmart.timer dummy
+scoreboard players set @a afksmart.timer 0
 
 # Stats to track while player is active (NOT AFK)
 scoreboard objectives add afksmart.stat.whileActive.aviate minecraft.custom:minecraft.aviate_one_cm

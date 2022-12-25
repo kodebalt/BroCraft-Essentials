@@ -1,14 +1,15 @@
 ## Create Config
 scoreboard objectives add playtime.config dummy "Playtime Config"
+execute unless score #hookStatus:AFKSmart playtime.config matches 0..1 run scoreboard players set #hookStatus:AFKSmart playtime.config 0
 
 ## Create Scoreboard Objectives
-scoreboard objectives add playtime.stat.timeInTicks minecraft.custom:minecraft.play_time "Playtime (Ticks)"
-# Gets the partial remaining hour (aka minutes between 0-59 inclusive)
-scoreboard objectives add playtime.remainderTimeInTicks dummy "Internal: Ticks after modulo (timeInTicks % 72000)"
-# Converts the remaining time in ticks to minutes
-scoreboard objectives add playtime.remainderTimeInMinutes dummy "Internal: 'playtime.remainderTimeInTicks' to minutes"
-scoreboard objectives add playtime.timeInHours dummy "Playtime (Hours)"
-scoreboard objectives add playtime.timeInDays dummy "Playtime (Days)"
+scoreboard objectives add playtime.stat.timeInTicks minecraft.custom:minecraft.play_time "playtime.stat.timeInTicks"
+# Internal: Ticks after modulo (timeInTicks % 72000). Gets the partial remaining hour (aka minutes between 0-59 inclusive)
+scoreboard objectives add playtime.remainderTimeInTicks dummy "playtime.remainderTimeInTicks"
+# Internal: 'playtime.remainderTimeInTicks' to minutes. Converts the remaining time in ticks to minutes
+scoreboard objectives add playtime.remainderTimeInMinutes dummy "playtime.remainderTimeInMinutes"
+scoreboard objectives add playtime.timeInHours dummy "playtime.timeInHours"
+scoreboard objectives add playtime.timeInDays dummy "playtime.timeInDays"
 
 ## Create Trigger
 scoreboard objectives add playtime trigger "/trigger playtime"
@@ -26,7 +27,8 @@ scoreboard players set #1728000 playtime.constantVar 1728000
 ## Create variables that rely on the AFKSmart datapack
 # Enable hook between Playtime and AFKSmart
 scoreboard objectives add playtime.hookToAFKSmart dummy "AFKSmart Hook"
-scoreboard players set #isInstalled:AFKSmart playtime.hookToAFKSmart 0
+execute unless score #isInstalled:AFKSmart playtime.hookToAFKSmart matches 0..1 run scoreboard players set #isInstalled:AFKSmart playtime.hookToAFKSmart 0
+
 # Create variable to hold AFK status boolean
 scoreboard objectives add playtime.isAFK dummy "Is Player AFK?"
-scoreboard players set #isAFK playtime.isAFK 0
+execute unless score #isAFK playtime.isAFK matches 0..1 run scoreboard players set #isAFK playtime.isAFK 0

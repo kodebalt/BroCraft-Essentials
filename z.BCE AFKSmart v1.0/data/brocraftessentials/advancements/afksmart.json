@@ -6,14 +6,12 @@
     "title": "AFKSmart v1.0                 ",
     "description": [
       "",
-      {
-        "text": "Track and announce when a player becomes AFK\n",
-        "color": "gold"
-      },
-      { "text": "Commands: ", "color": "green" },
-      { "text": "/trigger afk", "color": "yellow" },
-      { "text": "\nADMIN: /function afk:config", "color": "yellow" },
-      { "text": "\nby ZachTheDev", "color": "#FF5722" }
+      {"text": "Tracks and announces when a player becomes AFK\n", "color": "gold"},
+      {"text": "Command: ", "color": "red"},
+      {"text": "/trigger afk", "color": "yellow"},
+      {"text": "\nADMIN: ", "color": "dark_red"},
+      {"text": "/function afk:config", "color": "yellow"},
+      {"text": "\nby ZachTheDev", "color": "#FF5722"}
     ],
     "show_toast": false,
     "announce_to_chat": false
