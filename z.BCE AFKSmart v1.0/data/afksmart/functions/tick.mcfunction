@@ -7,11 +7,11 @@ execute if score #enabled afksmart.config matches 1 run schedule function afksma
 execute unless score #timeToAFKInSeconds afksmart.config matches 1..86400 run scoreboard players set #timeToAFKInSeconds afksmart.config 60
 
 ## Store the original team of a player for the rejointeam function
-execute as @a[team=!AFK] at @s run function afksmart:saveteam
+execute as @a[team=!AFK] as @s run function afksmart:saveteam
 
 ## Calculate to Time to AFK config value in ticks for conditional statements
 scoreboard players operation #timeToAFKInTicks afksmart.config = #timeToAFKInSeconds afksmart.config
-scoreboard players operation #timeToAFKInTicks afksmart.config *= #20 afksmart.constantVar
+scoreboard players operation #timeToAFKInTicks afksmart.config *= #20 afksmart.constants
 
 ## Handle timer based on AFK status
 # Add 1 each tick to timer so we know how long player is idle
@@ -22,13 +22,13 @@ scoreboard players set @a[team=AFK] afksmart.timer 0
 
 ## Handle Movement Events
 # Reset timer if player moves
-execute as @a[team=!AFK] at @s run function afksmart:onmove
+execute as @a[team=!AFK] as @s run function afksmart:onmove
 
 # Set player as AFK is timer reaches config value
-execute as @a[team=!AFK] if score #timeToAFKInTicks afksmart.config = @s afksmart.timer at @s run function afksmart:onafk
+execute as @a[team=!AFK] if score #timeToAFKInTicks afksmart.config = @s afksmart.timer as @s run function afksmart:onafk
 
 # Clear AFK if player moves while AFK
-execute as @a[team=AFK] at @s run function afksmart:onmovewhileafk
+execute as @a[team=AFK] as @s run function afksmart:onmovewhileafk
 
 ## Join Event
 ## TODO
@@ -45,4 +45,4 @@ team join DEFAULT @a[team=]
 scoreboard players enable @a afk
 
 ## Run if player used '/trigger afk' command
-execute as @a[scores={afk=1..}] at @s run function afksmart:toggleafk
+execute as @a[scores={afk=1..}] as @s run function afksmart:toggleafk

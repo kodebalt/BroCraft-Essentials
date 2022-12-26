@@ -1,0 +1,24 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:dirt"
+    },
+    "title": "PlayerTeams v1.0                                         ",
+    "description": [
+      "",
+      {"text": "description","color": "gold"},
+      {"text": "\nDependency: x (Optional)", "color": "gray"},
+      {"text": "\nCommand: ", "color": "red"},{"text": "/trigger playerteams", "color": "yellow"},
+      {"text": "\nADMIN: ", "color": "dark_red"},{"text": "/function playerteams:config", "color": "yellow"},
+      {"text": "\nby ZachTheDev", "color": "#FF5722"}
+    ],
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "brocraftessentials:root",
+  "criteria": {
+    "tick": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}

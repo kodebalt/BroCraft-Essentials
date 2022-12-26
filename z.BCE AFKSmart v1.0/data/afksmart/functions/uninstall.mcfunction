@@ -6,9 +6,6 @@ schedule clear afksmart:tick
 # Remove Config
 scoreboard objectives remove afksmart.config
 
-# Remove Constants
-scoreboard objectives remove afksmart.constantVar
-
 # Remove Scoreboard Objectives / Dummies
 scoreboard objectives remove afksmart.timer
 scoreboard objectives remove afksmart.stat.whileActive.aviate
@@ -147,6 +144,9 @@ scoreboard objectives remove afksmart.toggle
 
 # Remove Trigger
 scoreboard objectives remove afk
+
+# Remove Constants
+scoreboard objectives remove afksmart.constants
 
 # Remove Teams
 team remove AFK

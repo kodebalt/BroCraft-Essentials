@@ -1,0 +1,10 @@
+{
+  "pack": {
+    "pack_format": 10,
+    "description": [
+      {"text": "PlayerTeams", "color": "yellow"},
+      {"text": "\nBroCraft Essentials", "color": "gold"},
+      {"text": "\nby ZachTheDev", "color": "#FF5722"}
+    ]
+  }
+}

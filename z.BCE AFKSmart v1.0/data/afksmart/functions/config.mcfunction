@@ -1,14 +1,14 @@
 # Approx Config Time in Seconds
 execute if score #enabled afksmart.config matches 1 run scoreboard players operation #timeToAFKinSeconds afksmart.config = #timeToAFKInTicks afksmart.config
-execute if score #enabled afksmart.config matches 1 run scoreboard players operation #timeToAFKinSeconds afksmart.config /= #20 afksmart.constantVar
+execute if score #enabled afksmart.config matches 1 run scoreboard players operation #timeToAFKinSeconds afksmart.config /= #20 afksmart.constants
 
 # Approx Config Time in Minutes
 execute if score #enabled afksmart.config matches 1 run scoreboard players operation #timeToAFKinMinutes afksmart.config = #timeToAFKInSeconds afksmart.config
-execute if score #enabled afksmart.config matches 1 run scoreboard players operation #timeToAFKinMinutes afksmart.config /= #60 afksmart.constantVar
+execute if score #enabled afksmart.config matches 1 run scoreboard players operation #timeToAFKinMinutes afksmart.config /= #60 afksmart.constants
 
 # Header
 tellraw @s ["",{"text":"                                                                                                         ","color":"dark_gray","strikethrough":true}]
-tellraw @s ["",{"text":"                                ","color":"dark_gray"},{"text":"AFKSmart","color":"gold","bold":true},{"text":": ","color":"gray","bold":false},{"text":"Global Settings","color":"gray","bold": false},{"text":"                     ","color":"dark_gray"}]
+tellraw @s ["",{"text":"                                     ","color":"dark_gray"},{"text":"AFKSmart","color":"gold","bold":true},{"text":": ","color":"gray","bold":false},{"text":"Global Settings","color":"gray","bold": false}]
 tellraw @s ["",{"text":"                                                                                                         ","color":"dark_gray","strikethrough":true}]
 
 # Body

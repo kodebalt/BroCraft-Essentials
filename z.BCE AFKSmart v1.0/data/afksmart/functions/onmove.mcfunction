@@ -63,5 +63,5 @@ scoreboard players set @a[scores={afksmart.stat.whileActive.rideMinecart=1..}] a
 scoreboard players set @a[scores={afksmart.stat.whileActive.ridePig=1..}] afksmart.timer 0
 scoreboard players set @a[scores={afksmart.stat.whileActive.rideStrider=1..}] afksmart.timer 0
 
-execute as @a[team=!AFK] at @s run function afksmart:resetscores/resetactivestats
-execute as @a[team=!AFK] at @s run function afksmart:resetscores/resetafkstats
+execute as @a[team=!AFK] as @s run function afksmart:resetscores/resetactivestats
+execute as @a[team=!AFK] as @s run function afksmart:resetscores/resetafkstats

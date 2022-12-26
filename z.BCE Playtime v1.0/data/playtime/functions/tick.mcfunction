@@ -15,4 +15,4 @@ execute as @a as @s if score #hookStatus:AFKSmart playtime.config matches 1 run 
 scoreboard players enable @a playtime
 
 # Run if player used '/trigger platime' command
-execute as @a[scores={playtime=1..}] at @s run function playtime:print
+execute as @a[scores={playtime=1..}] as @s run function playtime:print

@@ -6,9 +6,6 @@ schedule clear playtime:tick
 # Remove Config
 scoreboard objectives remove playtime.config
 
-# Remove Constants
-scoreboard objectives remove playtime.constantVar
-
 # Remove Scoreboard Objectives / Dummies
 scoreboard objectives remove playtime.stat.timeInTicks
 scoreboard objectives remove playtime.remainderTimeInTicks
@@ -20,3 +17,6 @@ scoreboard objectives remove playtime.isAFK
 
 # Remove Trigger
 scoreboard objectives remove playtime
+
+# Remove Constants
+scoreboard objectives remove playtime.constants

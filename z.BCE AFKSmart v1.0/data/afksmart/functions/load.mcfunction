@@ -3,7 +3,7 @@
 # Called by: #minecraft:load
 
 ## Create Config
-scoreboard objectives add afksmart.config dummy "AFKSmart Config"
+scoreboard objectives add afksmart.config dummy
 execute unless score #enabled afksmart.config matches 0..1 run scoreboard players set #enabled afksmart.config 1
 execute unless score #timeToAFKInTicks afksmart.config matches 20..1728000 run scoreboard players set #timeToAFKInTicks afksmart.config 1200
 execute unless score #timeToAFKInSeconds afksmart.config matches 1..86400 run scoreboard players set #timeToAFKInSeconds afksmart.config 60
@@ -159,9 +159,9 @@ scoreboard objectives add afk trigger "/trigger afk"
 scoreboard objectives add afksmart.toggle dummy
 
 ## Create Constants
-scoreboard objectives add afksmart.constantVar dummy "Constant"
-scoreboard players set #20 afksmart.constantVar 20
-scoreboard players set #60 afksmart.constantVar 60
+scoreboard objectives add afksmart.constants dummy
+scoreboard players set #20 afksmart.constants 20
+scoreboard players set #60 afksmart.constants 60
 
 ## Create Team for when AFK
 team add AFK
