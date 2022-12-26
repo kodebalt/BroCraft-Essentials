@@ -1,2 +1,2 @@
 gamerule sendCommandFeedback false
-schedule function playtime:togglecommandfeedback/restore_command_feedback 1t replace
+schedule function playerteams:togglecommandfeedback/restore_command_feedback 1t replace

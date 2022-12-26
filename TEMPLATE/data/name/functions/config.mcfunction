@@ -12,5 +12,5 @@ tellraw @s ["",{"text":"                                                        
 tellraw @s ["",{"text":"                                                                                                         ","color":"dark_gray","strikethrough":true,"bold":false}]
 
 # Suppresses the extra message sent if done through /function
-execute store result score #sendCommandFeedback playtime.config run gamerule sendCommandFeedback
-execute if score #sendCommandFeedback playtime.config matches 1 run function playtime:togglecommandfeedback/hide_command_feedback
+execute store result score #sendCommandFeedback name.config run gamerule sendCommandFeedback
+execute if score #sendCommandFeedback name.config matches 1 run function name:togglecommandfeedback/hide_command_feedback
