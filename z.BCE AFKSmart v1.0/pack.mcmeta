@@ -1,10 +1,10 @@
 {
   "pack": {
-    "pack_format": 9,
+    "pack_format": 10,
     "description": [
-      { "text": "AFKSmart", "color": "gold" },
-      { "text": "\nBroCraft Essentials", "color": "#FF5722" },
-      { "text": "\nby ZachTheDev (Fork of JohnPaulInso)", "color": "#902200" }
+      {"text": "AFKSmart", "color": "yellow"},
+      {"text": "\nBroCraft Essentials", "color": "gold"},
+      {"text": "\nby ZachTheDev (Fork of JohnPaulInso)", "color": "#FF5722"}
     ]
   }
 }

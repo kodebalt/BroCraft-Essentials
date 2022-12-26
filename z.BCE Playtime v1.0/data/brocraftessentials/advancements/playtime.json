@@ -7,10 +7,9 @@
     "description": [
       "",
       {"text": "Tracks, Calculates, and Outputs a Players Playtime\n","color": "gold"},
-      {"text": "Command: ", "color": "red"},
-      {"text": "/trigger playtime", "color": "yellow"},
-      {"text": "\nADMIN: ", "color": "dark_red"},
-      {"text": "/function playtime:config", "color": "yellow"},
+      {"text": "Dependency: AFKSmart (Optional)", "color": "#E57373"},
+      {"text": "Command: ", "color": "red"},{"text": "/trigger playtime", "color": "yellow"},
+      {"text": "\nADMIN: ", "color": "dark_red"},{"text": "/function playtime:config", "color": "yellow"},
       {"text": "\nby ZachTheDev", "color": "#FF5722"}
     ],
     "show_toast": false,
