@@ -1,0 +1,15 @@
+execute if score #defaultTeamColor playerteams.constants matches 0 run team modify DEFAULT color black
+execute if score #defaultTeamColor playerteams.constants matches 1 run team modify DEFAULT color dark_blue
+execute if score #defaultTeamColor playerteams.constants matches 2 run team modify DEFAULT color dark_green
+execute if score #defaultTeamColor playerteams.constants matches 3 run team modify DEFAULT color dark_aqua
+execute if score #defaultTeamColor playerteams.constants matches 4 run team modify DEFAULT color dark_red
+execute if score #defaultTeamColor playerteams.constants matches 5 run team modify DEFAULT color dark_purple
+execute if score #defaultTeamColor playerteams.constants matches 6 run team modify DEFAULT color gold
+execute if score #defaultTeamColor playerteams.constants matches 7 run team modify DEFAULT color gray
+execute if score #defaultTeamColor playerteams.constants matches 8 run team modify DEFAULT color dark_gray
+execute if score #defaultTeamColor playerteams.constants matches 9 run team modify DEFAULT color blue
+execute if score #defaultTeamColor playerteams.constants matches 10 run team modify DEFAULT color green
+execute if score #defaultTeamColor playerteams.constants matches 11 run team modify DEFAULT color aqua
+execute if score #defaultTeamColor playerteams.constants matches 12 run team modify DEFAULT color red
+execute if score #defaultTeamColor playerteams.constants matches 13 run team modify DEFAULT color light_purple
+execute if score #defaultTeamColor playerteams.constants matches 14 run team modify DEFAULT color yellow

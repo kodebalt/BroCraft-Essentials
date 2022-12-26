@@ -6,7 +6,7 @@
     "title": "AFKSmart v1.0                                     ",
     "description": [
       "",
-      {"text": "Tracks and announces when a player becomes AFK", "color": "gold"},
+      {"text": "Tracks and Announces When a Player Becomes AFK", "color": "gold"},
       {"text": "\nDependency: PlayerTeams", "color": "gray"},
       {"text": "\nCommand: ", "color": "red"},{"text": "/trigger afk", "color": "yellow"},
       {"text": "\nADMIN: ", "color": "dark_red"},{"text": "/function afk:config", "color": "yellow"},

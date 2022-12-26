@@ -1,0 +1,17 @@
+scoreboard players set @s[team=DEFAULT] playerteams.whatTeam -1
+scoreboard players set @s[team=0] playerteams.whatTeam 0
+scoreboard players set @s[team=1] playerteams.whatTeam 1
+scoreboard players set @s[team=2] playerteams.whatTeam 2
+scoreboard players set @s[team=3] playerteams.whatTeam 3
+scoreboard players set @s[team=4] playerteams.whatTeam 4
+scoreboard players set @s[team=5] playerteams.whatTeam 5
+scoreboard players set @s[team=6] playerteams.whatTeam 6
+scoreboard players set @s[team=7] playerteams.whatTeam 7
+scoreboard players set @s[team=8] playerteams.whatTeam 8
+scoreboard players set @s[team=9] playerteams.whatTeam 9
+scoreboard players set @s[team=10] playerteams.whatTeam 10
+scoreboard players set @s[team=11] playerteams.whatTeam 11
+scoreboard players set @s[team=12] playerteams.whatTeam 12
+scoreboard players set @s[team=13] playerteams.whatTeam 13
+scoreboard players set @s[team=14] playerteams.whatTeam 14
+scoreboard players set @s[team=15] playerteams.whatTeam 15

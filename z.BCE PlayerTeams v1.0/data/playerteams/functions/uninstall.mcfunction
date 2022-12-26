@@ -7,7 +7,7 @@ schedule clear playerteams:tick
 scoreboard objectives remove playerteams.config
 
 # Remove Scoreboard Objectives / Dummies
-#scoreboard objectives remove playerteams.x
+scoreboard objectives remove playerteams.whatTeam
 
 # Remove Trigger
 scoreboard objectives remove playerteams
