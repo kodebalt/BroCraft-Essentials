@@ -2,15 +2,15 @@
   "display": {
     "icon": {
       "item": "minecraft:player_head",
-      "nbt": "{SkullOwner:{Id:[I;0,0,0,0],Properties:{textures:[{Value:'e3RleHR1cmVzOntTS0lOOnt1cmw6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2VmZWRmYTIzYTc5NjdhMGMzMDZhNWYyNWU0MTkwMWRiMzEyMTcwNTNiNmZlNTg0YjkwMGJhMzQzMzcwNzhkNyJ9fX0='}]}}}"
+      "nbt": "{SkullOwner:{Id:[I;0,0,0,0],Properties:{textures:[{Value:\"e3RleHR1cmVzOntTS0lOOnt1cmw6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2VmZWRmYTIzYTc5NjdhMGMzMDZhNWYyNWU0MTkwMWRiMzEyMTcwNTNiNmZlNTg0YjkwMGJhMzQzMzcwNzhkNyJ9fX0=\"}]}}}"
     },
     "title": "BroCraft Essentials",
     "frame": "goal",
     "description": [
       "",
-      {"text": "Custom-Built Data Packs\n", "color": "#FFEB3B"},
-      {"text": "for the BroCraft SMP\n", "color": "#FFEB3B"},
-      {"text": "by ZachTheDev", "color": "#FF5722"}
+      { "text": "Custom-Built Data Packs\n", "color": "#FFEB3B" },
+      { "text": "for the BroCraft SMP\n", "color": "#FFEB3B" },
+      { "text": "by ZachTheDev", "color": "#FF5722" }
     ],
     "background": "minecraft:textures/block/black_concrete.png",
     "show_toast": false,
