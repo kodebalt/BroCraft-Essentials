@@ -1,6 +1,6 @@
 # Header
 tellraw @s ["",{"text":"                                                                                                         ","color":"dark_gray","strikethrough":true}]
-tellraw @s ["",{"text":"                                       ","color":"dark_gray"},{"text":"playerteams","color":"gold","bold":true},{"text":": ","color":"gray","bold":false},{"text":"Global Settings","color":"gray","bold": false}]
+tellraw @s ["",{"text":"                                   ","color":"dark_gray"},{"text":"PlayerTeams","color":"gold","bold":true},{"text":": ","color":"gray","bold":false},{"text":"Global Settings","color":"gray","bold": false}]
 tellraw @s ["",{"text":"                                                                                                         ","color":"dark_gray","strikethrough":true}]
 
 # Body
