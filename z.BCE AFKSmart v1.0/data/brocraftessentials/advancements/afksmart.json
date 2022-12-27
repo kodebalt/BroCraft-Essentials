@@ -7,7 +7,7 @@
     "description": [
       "",
       {"text": "Tracks and Announces When a Player Becomes AFK", "color": "gold"},
-      {"text": "\nDependency: PlayerTeams", "color": "gray"},
+      {"text": "\nDependency: PlayerTeams (Optional)", "color": "gray"},
       {"text": "\nCommand: ", "color": "red"},{"text": "/trigger afk", "color": "yellow"},
       {"text": "\nADMIN: ", "color": "dark_red"},{"text": "/function afk:config", "color": "yellow"},
       {"text": "\nby ZachTheDev", "color": "#FF5722"}
