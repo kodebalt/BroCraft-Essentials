@@ -138,9 +138,10 @@ scoreboard objectives remove afksmart.stat.whileAFK.ridePig
 scoreboard objectives remove afksmart.stat.whileAFK.rideStrider
 
 scoreboard objectives remove afksmart.stat.isOffline
-scoreboard objectives remove afksmart.originalTeam
 scoreboard objectives remove afksmart.online
+
 scoreboard objectives remove afksmart.toggle
+scoreboard objectives remove afksmart.toggleNotAFKTeam
 
 # Remove Trigger
 scoreboard objectives remove afk
@@ -150,19 +151,8 @@ scoreboard objectives remove afksmart.constants
 
 # Remove Teams
 team remove AFK
-team remove DEFAULT
-team remove 0
-team remove 1
-team remove 2
-team remove 3
-team remove 4
-team remove 5
-team remove 6
-team remove 7
-team remove 8
-team remove 9
-team remove 10
-team remove 11
-team remove 12
-team remove 13
-team remove 14
+team remove NOT_AFK
+
+# Remove PlayerTeams Hook
+scoreboard objectives remove afksmart.hookTo.PlayerTeams
+scoreboard objectives remove afksmart.playerTeam

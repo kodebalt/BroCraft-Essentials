@@ -1,13 +1,19 @@
 ## Create Config
 scoreboard objectives add playerteams.config dummy
+scoreboard objectives add playerteams.tmp.config dummy
 execute unless score #defaultTeamColor playerteams.config matches 0..15 run scoreboard players set #defaultTeamColor playerteams.config 15
 
 ## Create Scoreboard Objectives
-scoreboard objectives add playerteams.whatTeam dummy
-execute unless score @s playerteams.whatTeam matches -1..15 run scoreboard players set @s playerteams.whatTeam -1
+scoreboard objectives add playerteams.currentTeam dummy
+scoreboard objectives add playerteams.tmp.currentTeam dummy
+execute as @a as @s unless score @s playerteams.currentTeam matches -1..15 run scoreboard players set @s playerteams.currentTeam -1
 
 ## Create Trigger
 scoreboard objectives add playerteams trigger "/trigger playerteams"
+execute as @a as @s run scoreboard players set @s playerteams 0
 
 ## Create Constants
 scoreboard objectives add playerteams.constants dummy
+
+## Setup Teams
+function playerteams:setupteams

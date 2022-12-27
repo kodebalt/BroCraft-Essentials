@@ -1,6 +1,6 @@
 ## Create Config
 scoreboard objectives add playtime.config dummy
-execute unless score #hookStatus:AFKSmart playtime.config matches 0..1 run scoreboard players set #hookStatus:AFKSmart playtime.config 0
+execute unless score #hookEnabled:AFKSmart playtime.config matches 0..1 run scoreboard players set #hookEnabled:AFKSmart playtime.config 0
 
 ## Create Scoreboard Objectives
 scoreboard objectives add playtime.stat.timeInTicks minecraft.custom:minecraft.play_time
@@ -16,6 +16,7 @@ scoreboard objectives add playtime.timeInDays dummy
 
 ## Create Trigger
 scoreboard objectives add playtime trigger "/trigger playtime"
+execute as @a as @s run scoreboard players set @s playtime 0
 
 ## Create Constants
 # Setup dummy for storing the below constants
@@ -29,8 +30,8 @@ scoreboard players set #1728000 playtime.constants 1728000
 
 ## Create variables that rely on the AFKSmart datapack
 # Enable hook between Playtime and AFKSmart
-scoreboard objectives add playtime.hookToAFKSmart dummy
-execute unless score #isInstalled:AFKSmart playtime.hookToAFKSmart matches 0..1 run scoreboard players set #isInstalled:AFKSmart playtime.hookToAFKSmart 0
+scoreboard objectives add playtime.hookTo.AFKSmart dummy
+execute unless score #isInstalled:AFKSmart playtime.hookTo.AFKSmart matches 0..1 run scoreboard players set #isInstalled:AFKSmart playtime.hookTo.AFKSmart 0
 
 # Create variable to hold AFK status boolean
 scoreboard objectives add playtime.isAFK dummy

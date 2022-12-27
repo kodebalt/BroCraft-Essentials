@@ -1,0 +1,12 @@
+1. PlayerTeams: Two page config
+2. AFKSmart: output time to afk after changing config
+3. PlayerTeams: add button to join team?
+4. PlayerTeams: output default color code after changing config
+5. PlayerTeams: change team color in hover window
+
+Major 1. AFKSmart: Rewrite movement to be xyz based. Create copy first to test efficiency
+
+BIG IDEA: Create helper pack that watches all created BCE datapacks for disabling 
+	uninstall most things
+	smart team control (if disable afk, player shouldnt be in afk team, could handle by just delete teams)
+	

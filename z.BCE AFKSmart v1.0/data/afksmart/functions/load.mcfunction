@@ -4,10 +4,13 @@
 
 ## Create Config
 scoreboard objectives add afksmart.config dummy
+scoreboard objectives add afksmart.tmp.config dummy
 execute unless score #enabled afksmart.config matches 0..1 run scoreboard players set #enabled afksmart.config 1
 execute unless score #timeToAFKInTicks afksmart.config matches 20..1728000 run scoreboard players set #timeToAFKInTicks afksmart.config 1200
 execute unless score #timeToAFKInSeconds afksmart.config matches 1..86400 run scoreboard players set #timeToAFKInSeconds afksmart.config 60
 execute unless score #timeToAFKInMinutes afksmart.config matches 1..1440 run scoreboard players set #timeToAFKInMinutes afksmart.config 1
+execute unless score #hookEnabled:PlayerTeams afksmart.config matches 0..1 run scoreboard players set #hookEnabled:PlayerTeams afksmart.config 0
+execute unless score #teamIsFound afksmart.config matches 0..1 run scoreboard players set #teamIsFound afksmart.config 0
 
 ## Create Scoreboard Objectives
 scoreboard objectives add afksmart.timer dummy
@@ -149,14 +152,15 @@ scoreboard objectives add afksmart.stat.whileAFK.rideStrider minecraft.custom:mi
 
 # need to reset to 0 each use
 scoreboard objectives add afksmart.stat.isOffline minecraft.custom:minecraft.leave_game
-
-scoreboard objectives add afksmart.originalTeam dummy
 scoreboard objectives add afksmart.online dummy
+
+# Toggles
+scoreboard objectives add afksmart.toggle dummy
+scoreboard objectives add afksmart.toggleNotAFKTeam dummy
 
 ## Create Trigger
 scoreboard objectives add afk trigger "/trigger afk"
-# 0 = !AFK; 1 = AFK
-scoreboard objectives add afksmart.toggle dummy
+execute as @a as @s run scoreboard players set @s afk 0
 
 ## Create Constants
 scoreboard objectives add afksmart.constants dummy
@@ -168,6 +172,14 @@ team add AFK
 team modify AFK color gray
 team modify AFK suffix {"text":" AFK","color":"red","bold":true}
 
+## Create variables that rely on the PlayerTeams datapack
+# Enable hook between AFKSmart and PlayerTeams
+scoreboard objectives add afksmart.hookTo.PlayerTeams dummy
+execute unless score #isInstalled:PlayerTeams afksmart.hookTo.PlayerTeams matches 0..1 run scoreboard players set #isInstalled:PlayerTeams afksmart.hookTo.PlayerTeams 0
+
+# Create variable to hold players original team from PlayerTeams
+scoreboard objectives add afksmart.playerTeam dummy
+execute as @a as @s unless score @s afksmart.playerTeam matches -1..15 run scoreboard players set @s afksmart.playerTeam -1
+
 ## Run Functions
-function afksmart:teamsetup/createteams
-function afksmart:teamsetup/setteamcolors
+execute if score #isInstalled:PlayerTeams afksmart.hookTo.PlayerTeams matches 0 run function afksmart:togglenotafkteam
