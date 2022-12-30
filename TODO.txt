@@ -1,7 +1,7 @@
-* ALL CONFIGS: Reformat like vanilla tweaks
+DONE * ALL CONFIGS: Reformat like vanilla tweaks
 * PlayerTeam color integration into the 'You are AFK' message
 * PlayerTeams: Two page config
-* PlayerTeams: trigger output capitalize
+DONE * PlayerTeams: trigger output capitalize
 * AFKSmart: output time to afk after changing config
 * PlayerTeams: add button to join team?
 * PlayerTeams: output default color code after changing config
@@ -11,5 +11,4 @@ Major 1. AFKSmart: Rewrite movement to be xyz based. Create copy first to test e
 
 BIG IDEA: Create helper pack that watches all created BCE datapacks for disabling 
 	uninstall most things
-	smart team control (if disable afk, player shouldnt be in afk team, could handle by just delete teams)
-	
+	smart team control (if disable afk, player shouldn't be in afk team, could handle by just delete teams)

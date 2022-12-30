@@ -24,6 +24,7 @@ tellraw @s ["",{"text":"[ ✎ ]","color":"gray","clickEvent":{"action":"suggest_
 # Footer
 tellraw @s ["",{"text":"                                                                                ","color":"dark_gray","strikethrough":true}]
 
-# Suppresses the extra message sent if done through /function
+# Suppresses the extra system message sent if done through /function
+# NOTE: It is impossible to supress the message if done through /trigger. That is in the source code of Minecraft that it is sent before the function is ran.
 execute store result score #sendCommandFeedback afksmart.config run gamerule sendCommandFeedback
 execute if score #sendCommandFeedback afksmart.config matches 1 run function afksmart:togglecommandfeedback/hide_command_feedback

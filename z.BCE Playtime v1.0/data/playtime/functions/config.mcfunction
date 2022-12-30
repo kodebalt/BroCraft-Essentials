@@ -11,6 +11,7 @@ execute if score #isInstalled:AFKSmart playtime.hookTo.AFKSmart matches 1 run ex
 # Footer
 tellraw @s ["",{"text":"                                                                                ","color":"dark_gray","strikethrough":true}]
 
-# Suppresses the extra message sent if done through /function
+# Suppresses the extra system message sent if done through /function
+# NOTE: It is impossible to supress the message if done through /trigger. That is in the source code of Minecraft that it is sent before the function is ran.
 execute store result score #sendCommandFeedback playtime.config run gamerule sendCommandFeedback
 execute if score #sendCommandFeedback playtime.config matches 1 run function playtime:togglecommandfeedback/hide_command_feedback
