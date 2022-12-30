@@ -17,6 +17,9 @@ scoreboard players operation @s playerteams.tmp.currentTeam = @s playerteams.cur
 execute unless score #defaultTeamColor playerteams.tmp.config = #defaultTeamColor playerteams.config run function playerteams:setdefaultteamcolor
 scoreboard players operation #defaultTeamColor playerteams.tmp.config = #defaultTeamColor playerteams.config
 
+# Force team-less players into the 'DEFAULT' team
+team join DEFAULT @a[team=]
+
 # Enables the '/trigger playerteams' command
 scoreboard players enable @a playerteams
 

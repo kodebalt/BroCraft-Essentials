@@ -5,6 +5,7 @@ schedule clear afksmart:tick
 
 # Remove Config
 scoreboard objectives remove afksmart.config
+scoreboard objectives remove afksmart.tmp.config
 
 # Remove Scoreboard Objectives / Dummies
 scoreboard objectives remove afksmart.timer

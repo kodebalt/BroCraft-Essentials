@@ -1,8 +1,11 @@
-1. PlayerTeams: Two page config
-2. AFKSmart: output time to afk after changing config
-3. PlayerTeams: add button to join team?
-4. PlayerTeams: output default color code after changing config
-5. PlayerTeams: change team color in hover window
+* ALL CONFIGS: Reformat like vanilla tweaks
+* PlayerTeam color integration into the 'You are AFK' message
+* PlayerTeams: Two page config
+* PlayerTeams: trigger output capitalize
+* AFKSmart: output time to afk after changing config
+* PlayerTeams: add button to join team?
+* PlayerTeams: output default color code after changing config
+* PlayerTeams: change team color in hover window
 
 Major 1. AFKSmart: Rewrite movement to be xyz based. Create copy first to test efficiency
 
