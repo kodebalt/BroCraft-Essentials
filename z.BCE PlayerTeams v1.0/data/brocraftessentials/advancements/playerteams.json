@@ -7,7 +7,7 @@
     "title": "PlayerTeams v1.0                                  ",
     "description": [
       "",
-      {"text": "Create, Modify, and Manage Colored Teams w/ Optional an Prefix", "color": "gold"},
+      {"text": "Create, Modify, and Manage Colored Teams w/ an Optional Prefix", "color": "gold"},
       {"text": "\nDependency: None", "color": "gray"},
       {"text": "\nCommand: ", "color": "red"},{"text": "/trigger playerteams", "color": "yellow"},
       {"text": "\nADMIN: ", "color": "dark_red"},{"text": "/function playerteams:config", "color": "yellow"},
