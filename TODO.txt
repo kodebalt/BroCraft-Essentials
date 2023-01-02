@@ -1,13 +1,14 @@
 DONE * ALL CONFIGS: Reformat like vanilla tweaks
-* PlayerTeam color integration into the 'You are AFK' message
-* PlayerTeams: Two page config
-DONE * PlayerTeams: trigger output capitalize
+DONE * AFKSmart: You are <gold>now</gold> AFK, You are <gold>no longer</gold> AFK.
 * AFKSmart: output time to afk after changing config
+* PlayerTeam color integration into the 'You are AFK' message
+DONE * PlayerTeams: Multi page config
+DONE * PlayerTeams: trigger output capitalize
 * PlayerTeams: add button to join team?
 * PlayerTeams: output default color code after changing config
 * PlayerTeams: change team color in hover window
 
-Major 1. AFKSmart: Rewrite movement to be xyz based. Create copy first to test efficiency
+Major - AFKSmart: Rewrite movement to be xyz based. Create copy first to test efficiency
 
 BIG IDEA: Create helper pack that watches all created BCE datapacks for disabling 
 	uninstall most things

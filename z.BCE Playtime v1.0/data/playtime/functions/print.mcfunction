@@ -44,7 +44,7 @@ execute as @s[scores={playtime.timeInHours=0}] run execute as @s[scores={playtim
 execute as @s[scores={playtime.timeInHours=0}] run execute as @s[scores={playtime.remainderTimeInMinutes=2..}] run tellraw @s ["",{"text":"You have ","color":"gray"},{"score":{"name":"@s","objective":"playtime.remainderTimeInMinutes"},"bold":true,"color":"gold"},{"text":" minutes","bold":true,"color":"gold"},{"text":" of playtime","color":"gray"}]
 
 # hour=0, min=0, day is 0 due to hours being 0
-execute as @s[scores={playtime.timeInHours=0}] run execute as @s[scores={playtime.remainderTimeInMinutes=0}] run tellraw @s ["",{"text":"You have","color":"gray"},{"text":" less than one minute of ","color":"gold","bold": true},{"text":"playtime ☹","color":"gray"}]
+execute as @s[scores={playtime.timeInHours=0}] run execute as @s[scores={playtime.remainderTimeInMinutes=0}] run tellraw @s ["",{"text":"You have ","color":"gray"},{"text":"less than one minute of ","color":"gold","bold": true},{"text":"playtime ☹","color":"gray"}]
 
 # hour>=2, min>=2, day>=2
 execute as @s[scores={playtime.timeInHours=2..}] run execute as @s[scores={playtime.remainderTimeInMinutes=2..}] run execute as @s[scores={playtime.timeInDays=2..}] run tellraw @s ["",{"text":"You have ","color":"gray"},{"score":{"name":"@s","objective":"playtime.timeInHours"},"bold":true,"color":"gold"},{"text":" hours","bold":true,"color":"gold"},{"text":" and ","color":"gray"},{"score":{"name":"@s","objective":"playtime.remainderTimeInMinutes"},"bold":true,"color":"gold"},{"text":" minutes","bold":true,"color":"gold"},{"text":" of playtime (~","color":"gray"},{"score":{"name":"@s","objective":"playtime.timeInDays"},"color":"gray"},{"text":" days)","color":"gray"}]
