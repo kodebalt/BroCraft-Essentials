@@ -1,6 +1,25 @@
 execute as @s run function afksmart:resetscores/resetafkstats
 execute as @s run function afksmart:rejointeam
 execute as @s run title @s clear
-tellraw @s ["",{"text":"You are ","color":"gray"},{"text":"no longer ","color":"gold","bold":true},{"text":"AFK","color":"gray"}]
-# setup custom colors for 'You'
+
+execute if score #isInstalled:PlayerTeams afksmart.hookTo.PlayerTeams matches 0 run tellraw @s ["",{"text":"You are ","color":"gray"},{"text":"no longer ","color":"gold","bold":true},{"text":"AFK","color":"gray"}]
+
+# 'You' part of message is colored based on current team if PlayerTeams integration is active
+execute if score #isInstalled:PlayerTeams afksmart.hookTo.PlayerTeams matches 1 if score @s afksmart.playerTeam matches 0 run tellraw @s ["",{"text":"You ","color":"black"},{"text":"are ","color":"gray"},{"text":"no longer ","color":"gold","bold":true},{"text":"AFK","color":"gray"}]
+execute if score #isInstalled:PlayerTeams afksmart.hookTo.PlayerTeams matches 1 if score @s afksmart.playerTeam matches 1 run tellraw @s ["",{"text":"You ","color":"dark_blue"},{"text":"are ","color":"gray"},{"text":"no longer ","color":"gold","bold":true},{"text":"AFK","color":"gray"}]
+execute if score #isInstalled:PlayerTeams afksmart.hookTo.PlayerTeams matches 1 if score @s afksmart.playerTeam matches 2 run tellraw @s ["",{"text":"You ","color":"dark_green"},{"text":"are ","color":"gray"},{"text":"no longer ","color":"gold","bold":true},{"text":"AFK","color":"gray"}]
+execute if score #isInstalled:PlayerTeams afksmart.hookTo.PlayerTeams matches 1 if score @s afksmart.playerTeam matches 3 run tellraw @s ["",{"text":"You ","color":"dark_aqua"},{"text":"are ","color":"gray"},{"text":"no longer ","color":"gold","bold":true},{"text":"AFK","color":"gray"}]
+execute if score #isInstalled:PlayerTeams afksmart.hookTo.PlayerTeams matches 1 if score @s afksmart.playerTeam matches 4 run tellraw @s ["",{"text":"You ","color":"dark_red"},{"text":"are ","color":"gray"},{"text":"no longer ","color":"gold","bold":true},{"text":"AFK","color":"gray"}]
+execute if score #isInstalled:PlayerTeams afksmart.hookTo.PlayerTeams matches 1 if score @s afksmart.playerTeam matches 5 run tellraw @s ["",{"text":"You ","color":"dark_purple"},{"text":"are ","color":"gray"},{"text":"no longer ","color":"gold","bold":true},{"text":"AFK","color":"gray"}]
+execute if score #isInstalled:PlayerTeams afksmart.hookTo.PlayerTeams matches 1 if score @s afksmart.playerTeam matches 6 run tellraw @s ["",{"text":"You ","color":"gold"},{"text":"are ","color":"gray"},{"text":"no longer ","color":"gold","bold":true},{"text":"AFK","color":"gray"}]
+execute if score #isInstalled:PlayerTeams afksmart.hookTo.PlayerTeams matches 1 if score @s afksmart.playerTeam matches 7 run tellraw @s ["",{"text":"You ","color":"gray"},{"text":"are ","color":"gray"},{"text":"no longer ","color":"gold","bold":true},{"text":"AFK","color":"gray"}]
+execute if score #isInstalled:PlayerTeams afksmart.hookTo.PlayerTeams matches 1 if score @s afksmart.playerTeam matches 8 run tellraw @s ["",{"text":"You ","color":"dark_gray"},{"text":"are ","color":"gray"},{"text":"no longer ","color":"gold","bold":true},{"text":"AFK","color":"gray"}]
+execute if score #isInstalled:PlayerTeams afksmart.hookTo.PlayerTeams matches 1 if score @s afksmart.playerTeam matches 9 run tellraw @s ["",{"text":"You ","color":"blue"},{"text":"are ","color":"gray"},{"text":"no longer ","color":"gold","bold":true},{"text":"AFK","color":"gray"}]
+execute if score #isInstalled:PlayerTeams afksmart.hookTo.PlayerTeams matches 1 if score @s afksmart.playerTeam matches 10 run tellraw @s ["",{"text":"You ","color":"green"},{"text":"are ","color":"gray"},{"text":"no longer ","color":"gold","bold":true},{"text":"AFK","color":"gray"}]
+execute if score #isInstalled:PlayerTeams afksmart.hookTo.PlayerTeams matches 1 if score @s afksmart.playerTeam matches 11 run tellraw @s ["",{"text":"You ","color":"aqua"},{"text":"are ","color":"gray"},{"text":"no longer ","color":"gold","bold":true},{"text":"AFK","color":"gray"}]
+execute if score #isInstalled:PlayerTeams afksmart.hookTo.PlayerTeams matches 1 if score @s afksmart.playerTeam matches 12 run tellraw @s ["",{"text":"You ","color":"red"},{"text":"are ","color":"gray"},{"text":"no longer ","color":"gold","bold":true},{"text":"AFK","color":"gray"}]
+execute if score #isInstalled:PlayerTeams afksmart.hookTo.PlayerTeams matches 1 if score @s afksmart.playerTeam matches 13 run tellraw @s ["",{"text":"You ","color":"light_purple"},{"text":"are ","color":"gray"},{"text":"no longer ","color":"gold","bold":true},{"text":"AFK","color":"gray"}]
+execute if score #isInstalled:PlayerTeams afksmart.hookTo.PlayerTeams matches 1 if score @s afksmart.playerTeam matches 14 run tellraw @s ["",{"text":"You ","color":"yellow"},{"text":"are ","color":"gray"},{"text":"no longer ","color":"gold","bold":true},{"text":"AFK","color":"gray"}]
+execute if score #isInstalled:PlayerTeams afksmart.hookTo.PlayerTeams matches 1 if score @s afksmart.playerTeam matches 15 run tellraw @s ["",{"text":"You ","color":"white"},{"text":"are ","color":"gray"},{"text":"no longer ","color":"gold","bold":true},{"text":"AFK","color":"gray"}]
+
 execute at @s run tellraw @a[distance=0.001..] ["",{"selector":"@s"},{"text":" is ","color":"gray"},{"text":"no longer ","color":"gold","bold":true},{"text":"AFK","color":"gray"}]
