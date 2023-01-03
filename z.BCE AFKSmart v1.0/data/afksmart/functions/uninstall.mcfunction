@@ -156,4 +156,5 @@ team remove NOT_AFK
 
 # Remove PlayerTeams Hook
 scoreboard objectives remove afksmart.hookTo.PlayerTeams
+scoreboard objectives remove afksmart.tmp.hookTo.PlayerTeams
 scoreboard objectives remove afksmart.playerTeam

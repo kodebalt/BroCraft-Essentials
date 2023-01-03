@@ -1,2 +1,2 @@
-execute if score #hookEnabled:AFKSmart playtime.config matches 0 run scoreboard players set #hookEnabled:AFKSmart playtime.config 1
+execute if score #isInstalled:AFKSmart playtime.hookTo.AFKSmart matches 1 if score #hookEnabled:AFKSmart playtime.config matches 0 run scoreboard players set #hookEnabled:AFKSmart playtime.config 1
 function playtime:config

@@ -18,7 +18,7 @@ team add YELLOW
 team add WHITE
 
 ## Set Team Colors
-team modify DEFAULT color white
+function playerteams:setdefaultteamcolor
 function playerteams:setstaticteamcolor
 
 ## Set Team Prefix(s)

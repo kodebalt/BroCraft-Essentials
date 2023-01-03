@@ -1,6 +1,9 @@
 execute if score @s afksmart.timer = #timeToAFKInTicks afksmart.config as @s run tellraw @s ["",{"text":"You are ","color":"gray"},{"text":"now ","color":"gold","bold":true},{"text":"AFK","color":"gray"}]
-execute if score @s afksmart.timer = #timeToAFKInTicks afksmart.config at @s run tellraw @a[distance=0.001..] ["",{"selector":"@s"},{"text":" is ","color":"gray"},{"text":"now ","color":"gold","bold":true},{"text":"AFK","color":"gray"}]
+execute if score #isInstalled:PlayerTeams afksmart.hookTo.PlayerTeams matches 0 if score @s afksmart.timer = #timeToAFKInTicks afksmart.config at @s run tellraw @a[distance=0.001..] ["",{"selector":"@s","color":"gray"},{"text":" is ","color":"gray"},{"text":"now ","color":"gold","bold":true},{"text":"AFK","color":"gray"}]
+execute if score #isInstalled:PlayerTeams afksmart.hookTo.PlayerTeams matches 1 if score #hookEnabled:PlayerTeams afksmart.config matches 0 if score @s afksmart.timer = #timeToAFKInTicks afksmart.config at @s run tellraw @a[distance=0.001..] ["",{"selector":"@s","color":"gray"},{"text":" is ","color":"gray"},{"text":"now ","color":"gold","bold":true},{"text":"AFK","color":"gray"}]
+execute if score #isInstalled:PlayerTeams afksmart.hookTo.PlayerTeams matches 1 if score #hookEnabled:PlayerTeams afksmart.config matches 1 if score @s afksmart.timer = #timeToAFKInTicks afksmart.config at @s run tellraw @a[distance=0.001..] ["",{"selector":"@s"},{"text":" is ","color":"gray"},{"text":"now ","color":"gold","bold":true},{"text":"AFK","color":"gray"}]
 execute if score @s afksmart.timer = #timeToAFKInTicks afksmart.config as @s run title @s times 2 80 2
 execute if score @s afksmart.timer = #timeToAFKInTicks afksmart.config as @s run title @s title {"text":"You are AFK","color":"red","bold":true}
 execute if score @s afksmart.timer = #timeToAFKInTicks afksmart.config as @s run title @s subtitle {"text":"Have fun, don't die","color":"gold"}
 execute if score @s afksmart.timer = #timeToAFKInTicks afksmart.config as @s run team join AFK @s
+scoreboard players set @s afksmart.timer 0

@@ -1,6 +1,7 @@
 ## Create Config
 scoreboard objectives add playerteams.config dummy
 scoreboard objectives add playerteams.tmp.config dummy
+scoreboard players set @a playerteams.tmp.config 0
 execute unless score #defaultTeamColor playerteams.config matches 0..15 run scoreboard players set #defaultTeamColor playerteams.config 15
 
 ## Create Scoreboard Objectives
@@ -17,3 +18,6 @@ scoreboard objectives add playerteams.constants dummy
 
 ## Setup Teams
 function playerteams:setupteams
+
+# Rejoin team (if config value is set)
+execute as @a as @s run function playerteams:rejointeam

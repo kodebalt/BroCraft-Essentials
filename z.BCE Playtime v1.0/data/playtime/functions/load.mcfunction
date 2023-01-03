@@ -1,6 +1,6 @@
 ## Create Config
 scoreboard objectives add playtime.config dummy
-execute unless score #hookEnabled:AFKSmart playtime.config matches 0..1 run scoreboard players set #hookEnabled:AFKSmart playtime.config 0
+execute unless score #hookEnabled:AFKSmart playtime.config matches 0..1 run scoreboard players set #hookEnabled:AFKSmart playtime.config 1
 
 ## Create Scoreboard Objectives
 scoreboard objectives add playtime.stat.timeInTicks minecraft.custom:minecraft.play_time

@@ -1,2 +1,2 @@
-execute if score #hookEnabled:PlayerTeams afksmart.config matches 0 run scoreboard players set #hookEnabled:PlayerTeams afksmart.config 1
+execute if score #isInstalled:PlayerTeams afksmart.hookTo.PlayerTeams matches 1 if score #hookEnabled:PlayerTeams afksmart.config matches 0 run scoreboard players set #hookEnabled:PlayerTeams afksmart.config 1
 function afksmart:config

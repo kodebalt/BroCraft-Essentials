@@ -5,12 +5,12 @@
 ## Create Config
 scoreboard objectives add afksmart.config dummy
 scoreboard objectives add afksmart.tmp.config dummy
+scoreboard players set @a afksmart.tmp.config 0
 execute unless score #enabled afksmart.config matches 0..1 run scoreboard players set #enabled afksmart.config 1
 execute unless score #timeToAFKInTicks afksmart.config matches 20..1728000 run scoreboard players set #timeToAFKInTicks afksmart.config 1200
 execute unless score #timeToAFKInSeconds afksmart.config matches 1..86400 run scoreboard players set #timeToAFKInSeconds afksmart.config 60
 execute unless score #timeToAFKInMinutes afksmart.config matches 1..1440 run scoreboard players set #timeToAFKInMinutes afksmart.config 1
-execute unless score #hookEnabled:PlayerTeams afksmart.config matches 0..1 run scoreboard players set #hookEnabled:PlayerTeams afksmart.config 0
-execute unless score #teamIsFound afksmart.config matches 0..1 run scoreboard players set #teamIsFound afksmart.config 0
+execute unless score #hookEnabled:PlayerTeams afksmart.config matches 0..1 run scoreboard players set #hookEnabled:PlayerTeams afksmart.config 1
 
 ## Create Scoreboard Objectives
 scoreboard objectives add afksmart.timer dummy
@@ -175,6 +175,7 @@ team modify AFK suffix {"text":" AFK","color":"red","bold":true}
 ## Create variables that rely on the PlayerTeams datapack
 # Enable hook between AFKSmart and PlayerTeams
 scoreboard objectives add afksmart.hookTo.PlayerTeams dummy
+scoreboard objectives add afksmart.tmp.hookTo.PlayerTeams dummy
 execute unless score #isInstalled:PlayerTeams afksmart.hookTo.PlayerTeams matches 0..1 run scoreboard players set #isInstalled:PlayerTeams afksmart.hookTo.PlayerTeams 0
 
 # Create variable to hold players original team from PlayerTeams
