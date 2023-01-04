@@ -2,17 +2,20 @@ DONE * ALL CONFIGS: Reformat like vanilla tweaks
 DONE * AFKSmart: You are <gold>now</gold> AFK, You are <gold>no longer</gold> AFK.
 DONE * AFKSmart: output time to afk after changing config
 DONE * PlayerTeams: BUG - playerteams.currentTeam is reset when disabled. why? found: cause NOT_AFK team is removed 1 tick after loading. fix: schedule rejointeam function to be 1t after load. ez
-#REVERTED# * AFKSmart: PlayerTeam color integration into the 'You are AFK' message
 DONE * PlayerTeams: Multi page config
 DONE * PlayerTeams: trigger output capitalize
 * PlayerTeams: add button to join team?
 DONE * PlayerTeams: output default color code after changing config
-       output actual color?
+       DONE output actual color?
 * PlayerTeams: change team color in hover window
+* PlayerTeams: BUG - player rejoins team even if afk. fix: add afksmart hook to playerteams? ugh
 * PlayTime: track total AFK time
+* AFKSmart/PlayerTeams: BUG - config option change message on first join. fix: setup init score for new players that runs function to setup those scores and future proof it
 
 Major - AFKSmart: Rewrite movement to be xyz based. Create copy first to test efficiency
 
 BIG IDEA: Create helper pack that watches all created BCE datapacks for disabling 
 	uninstall most things
 	smart team control (if disable afk, player shouldn't be in afk team, could handle by just delete teams)
+
+#REVERTED# DONE * AFKSmart: PlayerTeam color integration into the 'You are AFK' message
