@@ -1,8 +1,8 @@
 DONE * ALL CONFIGS: Reformat like vanilla tweaks
 DONE * AFKSmart: You are <gold>now</gold> AFK, You are <gold>no longer</gold> AFK.
 DONE * AFKSmart: output time to afk after changing config
-* AFKSmart: BUG - playerteams.currentTeam is reset when AFKSmart is loaded. why?
-REVERTED/CANCELED * AFKSmart: PlayerTeam color integration into the 'You are AFK' message
+DONE * PlayerTeams: BUG - playerteams.currentTeam is reset when disabled. why? found: cause NOT_AFK team is removed 1 tick after loading. fix: schedule rejointeam function to be 1t after load. ez
+#REVERTED# * AFKSmart: PlayerTeam color integration into the 'You are AFK' message
 DONE * PlayerTeams: Multi page config
 DONE * PlayerTeams: trigger output capitalize
 * PlayerTeams: add button to join team?

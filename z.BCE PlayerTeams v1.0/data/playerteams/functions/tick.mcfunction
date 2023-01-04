@@ -22,7 +22,7 @@ execute as @a as @s unless score @s playerteams.tmp.config matches 0 run tellraw
 execute as @a as @s run scoreboard players set @s playerteams.tmp.config 0
 
 # Force team-less players into the 'DEFAULT' team
-team join DEFAULT @a[team=]
+team join DEFAULT @s[team=]
 
 # Enables the '/trigger playerteams' command
 scoreboard players enable @a playerteams

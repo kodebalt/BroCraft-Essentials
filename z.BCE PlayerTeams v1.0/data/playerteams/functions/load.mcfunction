@@ -19,5 +19,5 @@ scoreboard objectives add playerteams.constants dummy
 ## Setup Teams
 function playerteams:setupteams
 
-# Rejoin team (if config value is set)
-execute as @a as @s run function playerteams:rejointeam
+## Rejoin team (if config value is set)
+schedule function playerteams:rejointeam 1t
