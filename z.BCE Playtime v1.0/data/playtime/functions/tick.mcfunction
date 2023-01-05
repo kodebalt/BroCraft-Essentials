@@ -19,5 +19,5 @@ execute if score #isInstalled:AFKSmart playtime.hookTo.AFKSmart matches 1 if sco
 # Enables the '/trigger playtime' command
 scoreboard players enable @a playtime
 
-# Run if player used '/trigger platime' command
+# Run if player used '/trigger playtime' command
 execute as @a[scores={playtime=1..}] as @s run function playtime:print

@@ -7,6 +7,6 @@ execute if score @s afksmart.toggle matches 1 if entity @s[team=AFK] run functio
 scoreboard players set @s afk 0
 
 # Suppresses the extra system message sent if done through /function
-# NOTE: It is impossible to supress the message if done through /trigger. That is in the source code of Minecraft that it is sent before the function is ran.
+# NOTE: It is impossible to suppress the message if done through /trigger. That is in the source code of Minecraft that it is sent before the function is ran.
 execute store result score #sendCommandFeedback afksmart.config run gamerule sendCommandFeedback
 execute if score #sendCommandFeedback afksmart.config matches 1 run function afksmart:togglecommandfeedback/hide_command_feedback

@@ -9,7 +9,7 @@ execute as @a as @s unless score @s playerteams.currentTeam matches -1..15 run s
 # Forces the color of each static team to never change
 function playerteams:setstaticteamcolor
 
-# Retreive players team if the team is different from the last tick
+# Retrieve players team if the team is different from the last tick
 execute as @a as @s unless score @s playerteams.tmp.currentTeam = @s playerteams.currentTeam run function playerteams:currentteam
 scoreboard players operation @s playerteams.tmp.currentTeam = @s playerteams.currentTeam
 

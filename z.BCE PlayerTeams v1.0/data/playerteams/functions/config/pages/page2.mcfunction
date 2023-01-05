@@ -16,6 +16,6 @@ tellraw @s ["",{"text":"                        "},{"text":"     "},{"text":"<",
 tellraw @s ["",{"text":"                                                                                ","color":"dark_gray","strikethrough":true}]
 
 # Suppresses the extra system message sent if done through /function
-# NOTE: It is impossible to supress the message if done through /trigger. That is in the source code of Minecraft that it is sent before the function is ran.
+# NOTE: It is impossible to suppress the message if done through /trigger. That is in the source code of Minecraft that it is sent before the function is ran.
 execute store result score #sendCommandFeedback playerteams.config run gamerule sendCommandFeedback
 execute if score #sendCommandFeedback playerteams.config matches 1 run function playerteams:togglecommandfeedback/hide_command_feedback
