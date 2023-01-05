@@ -1,21 +1,37 @@
+Minor -
 DONE * ALL CONFIGS: Reformat like vanilla tweaks
 DONE * AFKSmart: You are <gold>now</gold> AFK, You are <gold>no longer</gold> AFK.
 DONE * AFKSmart: output time to afk after changing config
 DONE * PlayerTeams: BUG - playerteams.currentTeam is reset when disabled. why? found: cause NOT_AFK team is removed 1 tick after loading. fix: schedule rejointeam function to be 1t after load. ez
 DONE * PlayerTeams: Multi page config
 DONE * PlayerTeams: trigger output capitalize
-* PlayerTeams: add button to join team?
+* PlayerTeams: team control panel for picking team to join on player trigger. maybe /trigger joinateam
 DONE * PlayerTeams: output default color code after changing config
-       DONE output actual color?
+       DONE * output actual color?
 * PlayerTeams: change team color in hover window
 * PlayerTeams: BUG - player rejoins team even if afk. fix: add afksmart hook to playerteams? ugh
-* PlayTime: track total AFK time
+* Playtime: track total AFK time
 * AFKSmart/PlayerTeams: BUG - config option change message on first join. fix: setup init score for new players that runs function to setup those scores and future proof it
 
-Major - AFKSmart: Rewrite movement to be xyz based. Create copy first to test efficiency
+Major - 
+   * Create master helper pack
+      Watches over all BCE packs
+         Uninstall automatically on disable
+   * Setup tooling
+      https://mcbeet.dev/
+   * Migrate my packs to use the following:
+      Lantern Load: https://github.com/LanternMC/load
+      Version checker like in PlayerDB
+   * PlayerDB fork
+      Create fork of PlayerDB to use my namespacing and to cut out some bloat
+      https://github.com/rx-modules/PlayerDB
+   * AFKSmart: Rewrite movement to be xyz based. Create copy first to test efficiency
+      Utilize forked PlayerDB to store Pos and compare on each tick? have to research this more
+   * Create creative dimension plugin
+      Utilize forked PlayerDB
+      Need to create two boxes (copy how EnderChest+ does it and add the second box) to store full inventory, hotbar, offhand, and armor
+      Store xyz using forked PlayerDB
+      Store XP level
 
-BIG IDEA: Create helper pack that watches all created BCE datapacks for disabling 
-	uninstall most things
-	smart team control (if disable afk, player shouldn't be in afk team, could handle by just delete teams)
-
-#REVERTED# DONE * AFKSmart: PlayerTeam color integration into the 'You are AFK' message
+REVERTED CHANGES -
+   * AFKSmart: PlayerTeam color integration into the 'You are AFK' message

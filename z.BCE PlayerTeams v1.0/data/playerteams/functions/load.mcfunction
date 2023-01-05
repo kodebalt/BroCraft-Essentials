@@ -9,9 +9,12 @@ scoreboard objectives add playerteams.currentTeam dummy
 scoreboard objectives add playerteams.tmp.currentTeam dummy
 execute as @a as @s unless score @s playerteams.currentTeam matches -1..15 run scoreboard players set @s playerteams.currentTeam -1
 
-## Create Trigger
+## Create Triggers
 scoreboard objectives add playerteams trigger "/trigger playerteams"
 execute as @a as @s run scoreboard players set @s playerteams 0
+
+scoreboard objectives add joinateam trigger "/trigger joinateam"
+execute as @a as @s run scoreboard players set @s joinateam 0
 
 ## Create Constants
 scoreboard objectives add playerteams.constants dummy
