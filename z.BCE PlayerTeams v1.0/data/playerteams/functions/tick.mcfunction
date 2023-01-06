@@ -2,14 +2,18 @@
 
 schedule function playerteams:tick 1t
 
-# Verify that config values are in range
-execute unless score #defaultTeamColor playerteams.config matches 0..15 run scoreboard players set #defaultTeamColor playerteams.config 15
+# Verify that config values are in range if they are do this: set isValid flag to true and set it back to the lastValid score. If they are not do this: store last valid value, set isValid flag to false
+execute if score #defaultTeamColor playerteams.config.isValid matches 0 if score #defaultTeamColor playerteams.config matches 0..15 run function playerteams:configcheck_valid_defaultteamcolor
+execute unless score #defaultTeamColor playerteams.config.lastValid = #defaultTeamColor playerteams.config run scoreboard players operation #defaultTeamColor playerteams.config.lastValid = #defaultTeamColor playerteams.config
+execute unless score #defaultTeamColor playerteams.config.isValid matches 0 unless score #defaultTeamColor playerteams.config matches 0..15 run function playerteams:configcheck_invalid_defaultteamcolor
+
+# Keep non-config scores in proper range (config scores are above)
 execute as @a as @s unless score @s playerteams.currentTeam matches -1..15 run scoreboard players set @s playerteams.currentTeam -1
 
 # Forces the color of each static team to never change
 function playerteams:setstaticteamcolor
 
-# Retrieve players team if the team is different from the last tick,"bold":true
+# Retrieve players team if the team is different from the last tick
 execute as @a as @s unless score @s playerteams.tmp.currentTeam = @s playerteams.currentTeam run function playerteams:currentteam
 scoreboard players operation @s playerteams.tmp.currentTeam = @s playerteams.currentTeam
 
@@ -18,8 +22,9 @@ execute unless score #defaultTeamColor playerteams.tmp.config = #defaultTeamColo
 scoreboard players operation #defaultTeamColor playerteams.tmp.config = #defaultTeamColor playerteams.config
 
 # Detect Config Change: Color Code for the 'DEFAULT' Team
-execute as @a as @s unless score @s playerteams.tmp.config matches 0 run function playerteams:colorcodeconfigchangeprint
-execute as @a as @s run scoreboard players set @s playerteams.tmp.config 0
+execute as @a as @s unless score @s playerteams.tmp.config matches -2147483648 if score #defaultTeamColor playerteams.config.isValid matches 0 run tellraw @s ["",{"text":"[PlayerTeams] ","color":"gray","bold":true},{"text":"Input out of range, config value unchanged","color":"gray"}]
+execute as @a as @s unless score @s playerteams.tmp.config matches -2147483648 run function playerteams:colorcodeconfigchangeprint
+execute as @a as @s run scoreboard players set @s playerteams.tmp.config -2147483648
 
 # Force team-less players into the 'DEFAULT' team
 team join DEFAULT @a[team=]

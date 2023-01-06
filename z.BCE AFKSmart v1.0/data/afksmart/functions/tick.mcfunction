@@ -16,9 +16,9 @@ scoreboard players operation #timeToAFKInMinutes afksmart.config = #timeToAFKInS
 scoreboard players operation #timeToAFKInMinutes afksmart.config /= #60 afksmart.constants
 
 # Detect Config Change: Time until Player becomes AFK
-execute as @a as @s unless score @s afksmart.tmp.config matches 0 run tellraw @s ["",{"text":"[AFKSmart] ","color":"gray","bold":true},{"text":"Config option 'Time until Player becomes AFK' changed to ","color":"gray"},{"score":{"name":"#timeToAFKInSeconds","objective":"afksmart.config"},"color":"gold"},{"text":" (~","color":"gray"},{"score":{"name":"#timeToAFKInMinutes","objective":"afksmart.config"},"color":"gray"},{"text":" min)","color":"gray"}]
+execute as @a as @s unless score @s afksmart.tmp.config matches -2147483648 run tellraw @s ["",{"text":"[AFKSmart] ","color":"gray","bold":true},{"text":"Config option \"Time until Player becomes AFK\" changed to ","color":"gray"},{"score":{"name":"#timeToAFKInSeconds","objective":"afksmart.config"},"color":"gold"},{"text":" (~","color":"gray"},{"score":{"name":"#timeToAFKInMinutes","objective":"afksmart.config"},"color":"gray"},{"text":" min)","color":"gray"}]
 execute as @a as @s if score @s afksmart.timer >= #timeToAFKInTicks afksmart.config run function afksmart:toggleafk
-execute as @a as @s run scoreboard players set @s afksmart.tmp.config 0
+execute as @a as @s run scoreboard players set @s afksmart.tmp.config -2147483648
 
 # Always check if hooks are present. If so, set to true. If not, set to false.
 execute if score #isInstalled:PlayerTeams afksmart.hookTo.PlayerTeams matches 0 run execute if entity @r[advancements={brocraftessentials:playerteams=true}] run scoreboard players set #isInstalled:PlayerTeams afksmart.hookTo.PlayerTeams 1

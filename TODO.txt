@@ -1,23 +1,25 @@
 Minor -
    DONE * ALL CONFIGS: Reformat like vanilla tweaks to be proper width
+   * ALL: Add reset all config button
    * ALL: Namespace #vars with pack name
-   DONE * AFKSmart: You are <gold>now</gold> AFK, You are <gold>no longer</gold> AFK.
+   DONE * AFKSmart: Make You are <gold>now</gold> AFK, You are <gold>no longer</gold> AFK in order to be consistent with other BCE packs
    DONE * AFKSmart: output time to afk after changing config
+   * AFKSmart: Implement smart valid/invalid config checker like in playerteams
    * AFKSmart: BUG - if player joins another team besides afk while afk, it resets afk status. add score like shouldBeAFK to keep in team
    DONE * PlayerTeams: BUG - playerteams.currentTeam is reset when disabled. why? found: cause NOT_AFK team is removed 1 tick after loading. fix: schedule rejointeam function to be 1t after load. ez
    DONE * PlayerTeams: Multi page config
    DONE * PlayerTeams: trigger output capitalize
    DONE * PlayerTeams: team control panel for picking team to join on player trigger. maybe /trigger joinateam
-   DONE * PlayerTeams: output default color code after changing config
-         DONE * output actual color?
+   DONE * PlayerTeams: output default color code after changing config and output actual color?
+   DONE * PlayerTeams: change team color in hover window
+   * PlayerTeams: joinateam control panel - disable current team (lots of checking, but we making this look good. hopefully this doesnt kill performance doing all this)
    * PlayerTeams: config panel for players current team to modify prefix
    * PlayerTeams: add admin config option for max number of players in team
    * PlayerTeams: reset team prefix if max number of players is one and player leaves the team for good (have to handle cases of team change such as going afk)
-   * PlayerTeams: change team color in hover window
    * PlayerTeams: BUG - player rejoins team even if afk. fix: add afksmart hook to playerteams? ugh. ooooo what if we check to see if the player is in a non playerteams team and do not modify? wouldnt be smart with other pack compatibility, so a hook is ultimately the best solution, ugh again
-   * PlayerTeams/AFKSmart: Rename teams to have some control over sort order
    * Playtime: track total AFK time
    * AFKSmart/PlayerTeams: BUG - config option change message on first join. fix: setup init score for new players that runs function to setup those scores and future proof it
+   * AFKSmart/PlayerTeams: Rename teams to have some control over sort order
 
 Major -
    * Learn optimizations
@@ -25,6 +27,9 @@ Major -
    * Create master helper pack
       Watches over all BCE packs
          Uninstall automatically on disable
+      Global vars
+         aka themeing for all chats
+            primary = gray, secondary = gold
    * Setup tooling
       https://mcbeet.dev/
    * Migrate my packs to use the following:

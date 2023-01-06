@@ -5,7 +5,7 @@
 ## Create Config
 scoreboard objectives add afksmart.config dummy
 scoreboard objectives add afksmart.tmp.config dummy
-scoreboard players set @a afksmart.tmp.config 0
+scoreboard players set @a afksmart.tmp.config -2147483648
 execute unless score #enabled afksmart.config matches 0..1 run scoreboard players set #enabled afksmart.config 1
 execute unless score #timeToAFKInTicks afksmart.config matches 20..1728000 run scoreboard players set #timeToAFKInTicks afksmart.config 1200
 execute unless score #timeToAFKInSeconds afksmart.config matches 1..86400 run scoreboard players set #timeToAFKInSeconds afksmart.config 60

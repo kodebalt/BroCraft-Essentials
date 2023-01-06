@@ -5,6 +5,8 @@ schedule clear playerteams:tick
 
 # Remove Config
 scoreboard objectives remove playerteams.config
+scoreboard objectives remove playerteams.config.lastValid
+scoreboard objectives remove playerteams.config.isValid
 scoreboard objectives remove playerteams.tmp.config
 
 # Remove Scoreboard Objectives / Dummies
@@ -13,6 +15,8 @@ scoreboard objectives remove playerteams.tmp.currentTeam
 
 # Remove Trigger
 scoreboard objectives remove playerteams
+scoreboard objectives remove joinateam
+scoreboard objectives remove editmyteam
 
 # Remove Constants
 scoreboard objectives remove playerteams.constants
