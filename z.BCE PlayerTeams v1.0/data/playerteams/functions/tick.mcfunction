@@ -9,7 +9,7 @@ execute as @a as @s unless score @s playerteams.currentTeam matches -1..15 run s
 # Forces the color of each static team to never change
 function playerteams:setstaticteamcolor
 
-# Retrieve players team if the team is different from the last tick
+# Retrieve players team if the team is different from the last tick,"bold":true
 execute as @a as @s unless score @s playerteams.tmp.currentTeam = @s playerteams.currentTeam run function playerteams:currentteam
 scoreboard players operation @s playerteams.tmp.currentTeam = @s playerteams.currentTeam
 
@@ -35,3 +35,9 @@ scoreboard players enable @a joinateam
 
 # Run if player used '/trigger joinateam' command
 execute as @a[scores={joinateam=1..}] as @s run function playerteams:joinateam
+
+# Enables the '/trigger editmyteam' command
+scoreboard players enable @a editmyteam
+
+# Run if player used '/trigger editmyteam' command
+execute as @a[scores={editmyteam=1..}] as @s run function playerteams:editmyteam

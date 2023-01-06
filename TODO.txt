@@ -10,6 +10,9 @@ Minor -
    DONE * PlayerTeams: team control panel for picking team to join on player trigger. maybe /trigger joinateam
    DONE * PlayerTeams: output default color code after changing config
          DONE * output actual color?
+   * PlayerTeams: config panel for players current team to modify prefix
+   * PlayerTeams: add admin config option for max number of players in team
+   * PlayerTeams: reset team prefix if max number of players is one and player leaves the team for good (have to handle cases of team change such as going afk)
    * PlayerTeams: change team color in hover window
    * PlayerTeams: BUG - player rejoins team even if afk. fix: add afksmart hook to playerteams? ugh. ooooo what if we check to see if the player is in a non playerteams team and do not modify? wouldnt be smart with other pack compatibility, so a hook is ultimately the best solution, ugh again
    * PlayerTeams/AFKSmart: Rename teams to have some control over sort order

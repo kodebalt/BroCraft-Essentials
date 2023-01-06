@@ -16,6 +16,9 @@ execute as @a as @s run scoreboard players set @s playerteams 0
 scoreboard objectives add joinateam trigger "/trigger joinateam"
 execute as @a as @s run scoreboard players set @s joinateam 0
 
+scoreboard objectives add editmyteam trigger "/trigger editmyteam"
+execute as @a as @s run scoreboard players set @s editmyteam 0
+
 ## Create Constants
 scoreboard objectives add playerteams.constants dummy
 
