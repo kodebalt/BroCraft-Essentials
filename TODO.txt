@@ -1,19 +1,24 @@
 Minor -
-   DONE * ALL CONFIGS: Reformat like vanilla tweaks
+   DONE * ALL CONFIGS: Reformat like vanilla tweaks to be proper width
+   * ALL: Namespace #vars with pack name
    DONE * AFKSmart: You are <gold>now</gold> AFK, You are <gold>no longer</gold> AFK.
    DONE * AFKSmart: output time to afk after changing config
+   * AFKSmart: BUG - if player joins another team besides afk while afk, it resets afk status. add score like shouldBeAFK to keep in team
    DONE * PlayerTeams: BUG - playerteams.currentTeam is reset when disabled. why? found: cause NOT_AFK team is removed 1 tick after loading. fix: schedule rejointeam function to be 1t after load. ez
    DONE * PlayerTeams: Multi page config
    DONE * PlayerTeams: trigger output capitalize
-   * PlayerTeams: team control panel for picking team to join on player trigger. maybe /trigger joinateam
+   DONE * PlayerTeams: team control panel for picking team to join on player trigger. maybe /trigger joinateam
    DONE * PlayerTeams: output default color code after changing config
          DONE * output actual color?
    * PlayerTeams: change team color in hover window
-   * PlayerTeams: BUG - player rejoins team even if afk. fix: add afksmart hook to playerteams? ugh
+   * PlayerTeams: BUG - player rejoins team even if afk. fix: add afksmart hook to playerteams? ugh. ooooo what if we check to see if the player is in a non playerteams team and do not modify? wouldnt be smart with other pack compatibility, so a hook is ultimately the best solution, ugh again
+   * PlayerTeams/AFKSmart: Rename teams to have some control over sort order
    * Playtime: track total AFK time
    * AFKSmart/PlayerTeams: BUG - config option change message on first join. fix: setup init score for new players that runs function to setup those scores and future proof it
 
-Major - 
+Major -
+   * Learn optimizations
+      https://www.reddit.com/r/MinecraftCommands/comments/w4vjs3/whenever_i_create_datapacks_i_sometimes_do/
    * Create master helper pack
       Watches over all BCE packs
          Uninstall automatically on disable
@@ -29,6 +34,7 @@ Major -
       Utilize forked PlayerDB to store Pos and compare on each tick? have to research this more
    * Create creative dimension plugin
       Utilize forked PlayerDB
+      Use as starter reference: https://github.com/Speedy2025/Per-Dimension-Inventory
       Need to create two boxes (copy how EnderChest+ does it and add the second box) to store full inventory, hotbar, offhand, and armor
       Store xyz using forked PlayerDB
       Store XP level
